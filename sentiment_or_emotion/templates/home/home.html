@@ -28,47 +28,64 @@
 
 
   </head>
-  <body>
+  {% comment %} <body style="background-color: #e4eaec;"> {% endcomment %}
+  <body style="background-color: #9fb5b5;">
     
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" data-aos="fade-down" data-aos-delay="500">
-      <div class="container">
-        <a class="navbar-brand" href="/">Home</a>
+      <div class="container" style ="color:black;">
+
+        <a class="navbar-brand" style ="color:black;" href="/">Home</a>
         <div class="collapse navbar-collapse" id="ftco-nav">
         	<ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a href="/sentiment" class="nav-link">Sentiment Analysis</a></li>
-            <li class="nav-item"><a href="/emotion" class="nav-link">Emotion Analysis</a></li>
+            <li class="nav-item"><a href="/sentiment" class="nav-link" style ="color:black;" >Sentiment Analysis</a></li>
+            <li class="nav-item"><a href="/emotion" class="nav-link" style ="color:black;" >Emotion Analysis</a></li>
           </ul>
         </div>
       </div>
+      
     </nav>
     <!-- END nav -->
+    
+    {% comment %} <section class="ftco-cover"  id="section-home" style="background-image: url({% static 'home/images/twitter_back.jpg' %});"  data-aos="fade"  data-stellar-background-ratio="0.5">  {% endcomment %}
 
-    <section class="ftco-cover"  id="section-home" style="background-image: url({% static 'home/images/twitter_back.jpg' %});"  data-aos="fade"  data-stellar-background-ratio="0.5">
+      <section class="ftco-cover"  id="section-home" style="background-image: url({% static 'home/images/bgfinal2.png' %});"  data-stellar-background-ratio="0.5"> 
+    
       <div class="container">
         <div class="row align-items-center ftco-vh-100">
           <div class="col-md-7">
-            <h1 class="ftco-heading mb-3" data-aos="fade-up" data-aos-delay="500">Welcome To The World Of Tweets</h1>
-            <h2 class="h5 ftco-subheading mb-5" data-aos="fade-up"  data-aos-delay="600">Tweet Sentiment/Emotion Analysis</h2>
-              <div class="row">
+           <strong>
+
+             <h1 class="ftco-heading mb-3" data-aos="fade-up" data-aos-delay="500"style ="color:black;">Welcome To The World Of Tweets</h1>
+           </strong>
+            <h2 class="h5 ftco-subheading mb-5" data-aos="fade-up"  data-aos-delay="600" style ="color:black;" >Tweet Sentiment/Emotion Analysis</h2>
+            ----------------------------------------------------------------------------------
+            {% comment %}  Numbers {% endcomment %}
+            <h2 class="h5 ftco-subheading mb-5" data-aos="fade-up"  data-aos-delay="600" style ="color:black;" >
+              Analyze Twitter sentiment to uncover real-time public opinion. Understand trends, emotions, and customer feedback with powerful insights to drive smarter decisions and strategies.
+
+            </h2>
+          
+              {% comment %} <div class="row" style ="color:black;">
               <div class="box counter-left md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
                   <h1 class="counter" style="color: #6cbb23">350632</h1>
-                  <p>Tweets sent per minute</p>
+                  <pstyle ="color:black;">Tweets sent per minute</p>
                      </div>
                   <div class="box counter-left md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
               <h1 class="counter" style="color: #6cbb23">321056231</h1>
-              <p>Total Number of monthly active users on Twitter</p>
+              <p style ="color:black;" >Total Number of monthly active users on Twitter</p>
                   </div>
                   <div class="box counter-left md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
               <h1 class="counter" style="color:#6cbb23">7447680</h1>
-              <p>Minutes Since First Tweet Ever</p>
+              <pstyle ="color:black;">Minutes Since First Tweet Ever</p>
                   </div>
-              </div>
+              </div> {% endcomment %}
+              
             {% if user.is_authenticated == False %}
               <div>
+               
                 <br>
-                <br>
-                <br>
-              <h3 style="color:White" data-aos="fade-up" data-aos-delay="500">Perform <a href="/sentiment" style="color:#D7C004">Sentiment</a> And <a style="color:#D7C004" href="/emotion">Emotion</a> Analysis on Tweets</h3>
+              <h3 style="color:black" data-aos="fade-up"data-aos-delay="250">Perform <a href="/sentiment" style="color:white">Sentiment</a> 
+                <br>And <a style="color:white" href="/emotion">Emotion</a> Analysis on Tweets</h3>
           </div>
           {% endif %}
           </div>
@@ -77,7 +94,7 @@
     </section>
     <!-- END section -->
     
-    <section class="ftco-cover" id="section-about">
+    <section class="ftco-cover" id="section-about" style='background-color:#f5f1e7;'>
       <div class="container mx-auto" data-aos="fade-up">
         <!-- <div class="row"> -->
           <!-- <div class="col-12  mb-5" data-aos="fade-up"> -->
@@ -90,7 +107,9 @@
     <!-- END section -->
   
 
-    <section class="ftco-section tm-bg-pink-light">
+    {% comment %} <section class="ftco-section tm-bg-pink-light"> {% endcomment %}
+    <section class="ftco-section" style="background-color:#a3d6e0;">
+    
       <div class="row container grid mx-auto" data-aos="fade-up">
         <div class="col-6 tm-album-col">
         	<a href="/sentiment">
@@ -116,37 +135,97 @@
         </div>
       </div>
     </section>
-  <div class="ftco-section row justify-content-center text-center" data-aos="fade-up">
-          <h2>Developer</h2>
+  <div class="ftco-section row justify-content-center text-center" data-aos="fade-up" style='background-color:#f5f1e7;'>
+         
+          <h2 style="font-weight: bold; font-size: 48px;">Team</h2>
   </div>
-      <section class="ftco-section tm-bg-pink-light">
-        <div class="col-3 mx-auto"  data-aos="fade-up">
+      <section class="ftco-section tm-bg-pink-light" style="background-color:#f5f1e7">
+        <div class=" mx-auto"  data-aos="fade-up">
           
-          <div class="flip-container">
-            <div class="flipper">
-              <div class="front" style="background-image: url({% static 'home/images/puneet.jpg' %});">
-                <div class="box">
-                  <h2>Puneet Chhabra</h2>
-                  <p>SDE - 1</p>
+
+          <div class = "d-flex px-5">
+
+            <div class="flip-container px-5">
+              <div class="flipper">
+                <div class="front" >
+                  <!-- <div class="front" style="background-image: url({% static 'home/images/puneet.jpg' %});"> -->
+                    <div class="box">
+                  <h2>Arun Bhalla</h2>
+                  <p></p>
                 </div>
               </div>
               <div class="back">
                 <!-- back content -->
                 <blockquote>
-                  <p>Computer Science Student(IIT Patna), 1601CS34</p>
+                  <p>Computer Science Student</p>
                 </blockquote>
                 <div class="author d-flex">
                   <div class="image mr-3 align-self-center">
-                    <img src="{% static 'home/images/puneet_thumbail.jpg' %}" alt="">
+                    <!-- <img src="{% static 'home/images/puneet_thumbail.jpg' %}" alt=""> -->
                   </div>
-                  <div class="name align-self-center">Puneet Chhabra<span class="position">SDE - 1</span></div>
+                  <div class="name align-self-center">Arun Bhalla<span class="position">CSE</span></div>
                 </div>
               </div>
             </div>
-          </div> <!-- .flip-container -->
+          </div> 
+          
+          
+            <div class="flip-container px-5">
+              <div class="flipper">
+                <div class="front" >
+                  <!-- <div class="front" style="background-image: url({% static 'home/images/puneet.jpg' %});"> -->
+                    <div class="box">
+                  <h2>Varun Bhalla</h2>
+                  <p></p>
+                </div>
+              </div>
+              <div class="back">
+                <!-- back content -->
+                <blockquote>
+                  <p>Computer Science Student</p>
+                </blockquote>
+                <div class="author d-flex">
+                  <div class="image mr-3 align-self-center">
+                    <!-- <img src="{% static 'home/images/puneet_thumbail.jpg' %}" alt=""> -->
+                  </div>
+                  <div class="name align-self-center">Varun Bhalla<span class="position">CSE</span></div>
+                </div>
+              </div>
+            </div>
+          </div> 
+          
+          
+            <div class="flip-container px-5">
+              <div class="flipper">
+                <div class="front" >
+                  <!-- <div class="front" style="background-image: url({% static 'home/images/puneet.jpg' %});"> -->
+                    <div class="box">
+                  <h2>Anuj Maurya</h2>
+                  <p></p>
+                </div>
+              </div>
+              <div class="back">
+                <!-- back content -->
+                <blockquote>
+                  <p>Computer Science Student</p>
+                </blockquote>
+                <div class="author d-flex">
+                  <div class="image mr-3 align-self-center">
+                    <!-- <img src="{% static 'home/images/puneet_thumbail.jpg' %}" alt=""> -->
+                  </div>
+                  <div class="name align-self-center">Anuj Maurya<span class="position">CSE</span></div>
+                </div>
+              </div>
+            </div>
+          </div> 
+          
+          
+          
         </div>
-    </section>
-      </div>
+          <!-- .flip-container -->
+        </div>
+      </section>
+    </div>
 
 
 
