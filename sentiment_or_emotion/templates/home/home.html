@@ -29,9 +29,9 @@
 
   </head>
   {% comment %} <body style="background-color: #e4eaec;"> {% endcomment %}
-  <body style="background-color: #9fb5b5;">
+  <body style="background-color: #e0f7fa;">
     
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" data-aos="fade-down" data-aos-delay="500">
+    {% comment %} <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" data-aos="fade-down" data-aos-delay="500">
       <div class="container" style ="color:black;">
 
         <a class="navbar-brand" style ="color:black;" href="/">Home</a>
@@ -44,8 +44,8 @@
       </div>
       
     </nav>
-    <!-- END nav -->
-    
+    <!-- END nav --> {% endcomment %}
+    {% include "Navbar.html" %}
     {% comment %} <section class="ftco-cover"  id="section-home" style="background-image: url({% static 'home/images/twitter_back.jpg' %});"  data-aos="fade"  data-stellar-background-ratio="0.5">  {% endcomment %}
 
       <section class="ftco-cover"  id="section-home" style="background-image: url({% static 'home/images/bgfinal2.png' %});"  data-stellar-background-ratio="0.5"> 

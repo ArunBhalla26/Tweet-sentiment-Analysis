@@ -125,3 +125,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 MODELS = os.path.join(BASE_DIR, 'emotion/models')
+
+LOGIN_REDIRECT_URL = '/'

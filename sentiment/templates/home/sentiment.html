@@ -37,7 +37,7 @@
   </head>
   <body>
     
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" data-aos="fade-down" data-aos-delay="500">
+    {% comment %} <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" data-aos="fade-down" data-aos-delay="500">
       <div class="container">
         <a class="navbar-brand" style ="color:black;"href="/">Home</a>
         <div class="collapse navbar-collapse" id="ftco-nav">
@@ -48,7 +48,8 @@
         </div>
       </div>
     </nav>
-    <!-- END nav -->
+    <!-- END nav --> {% endcomment %}
+     {% include "Navbar.html" %}
 
     <section class="ftco-cover"  id="section-home" style="background-image: url({% static 'home/images/bgfinal2.png' %});"  data-aos="fade"  data-stellar-background-ratio="0.5">
       <div class="container">
