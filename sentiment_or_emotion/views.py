@@ -26,9 +26,10 @@ class CustomerRegistrationFormView(TemplateView):
         return render(request , "CustomerRegistrationForm.html", {"form" : form} )
     
 class ProfileFormPageView(TemplateView):
+
     def get(self ,request):
         form = ProfileForm()
-        return render(request , "ProfilePage.html", {"form" : form} )
+        return render(request , "ProfileForm.html", {"form" : form} )
     
     def post(self , request):
         user = request.user
@@ -40,7 +41,7 @@ class ProfileFormPageView(TemplateView):
             profile.save()
             messages.success(request , " Congratulations :) Profile Added SucessFully !")
         
-        return render(request , "ProfilePage.html", {"form" : form} )
+        return render(request , "ProfileForm.html", {"form" : form} )
 
 class MyPasswordChangeView(auth_view.PasswordChangeView):
     template_name = "PasswordChangeForm.html"

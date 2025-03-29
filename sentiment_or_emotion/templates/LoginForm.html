@@ -4,8 +4,9 @@
 
 {% block a %}
 
+<div class="d-flex align-item-center justify-content-center mt-5">
 
-  <div class="container shadow px-5 mt-5">
+  <div class="container shadow px-5 mt-5 ">
     <h2 class = "text-center mt-3">
             Login Yourself Now !
         </h2>
@@ -25,8 +26,9 @@
             {% endif %}
 
                 {{ form.as_p }}
-               
-              <input type= "submit" value= "Submit" class="btn btn-primary btn-block mb-4"  >
+                <input type= "submit" value= "Submit" class="btn btn-primary btn-block mb-4"  >
+                <br>
+                
             <div class="text-center text-primary btn fw-bold">
                 <sma11>New User ? 
                     <a href="/accounts/signup/" class="text-danger">
@@ -44,6 +46,7 @@
                         
 
         </form>
+      </div>
       </div>
       </div>
 

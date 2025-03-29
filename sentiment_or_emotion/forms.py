@@ -7,6 +7,7 @@ from.models import Customer
 
 
 widget_attrs = {'class': 'form-control '}
+
 class CustomerRegistrationForm(UserCreationForm):
     
     password1 = forms.CharField(
@@ -49,13 +50,15 @@ class ProfileForm (forms.ModelForm):
         model = Customer
         fields = ['name', 'locality', 'city', 'state', 'zipcode' ]
         widgets = { "name":  forms.TextInput(attrs=widget_attrs),
+                   "twitter_handel" :  forms.TextInput(attrs=widget_attrs),
                    "locality" : forms.TextInput(attrs=widget_attrs), 
                    "city" : forms.TextInput(attrs=widget_attrs), 
-                   "state" : forms.Select(attrs=widget_attrs), 
+                   "state" : forms.TextInput(attrs=widget_attrs), 
                    "zipcode" : forms.NumberInput(attrs=widget_attrs), 
                    }
         labels = {
             "name": "Full Name",
+            "twitter_handel": "Twitter Handel",
             "locality": "Locality",
             "city": "City",
             "state": "State",

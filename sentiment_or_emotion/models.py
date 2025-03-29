@@ -45,12 +45,19 @@ STATE_CHOICES = (
 class Customer(models.Model):
     user = models.ForeignKey( User, on_delete=models.CASCADE)
     name = models. CharField(max_length=200)
+    twitter_handel = models. CharField(max_length=200)
     locality = models.CharField(max_length=200)
     city = models. CharField(max_length=50)
     zipcode = models. IntegerField()
-    state = models. CharField(choices=STATE_CHOICES,max_length= 50)
+    state = models. CharField(max_length= 50)
 
-    def str (self) :
-        return str(self.id ,max_length=50)    
+    def __str__(self) :
+        return str(self.name)    
+    
+    # def class Meta:
+    #     db_table = ''
+    #     managed = True
+    #     verbose_name = 'ModelName'
+    #     verbose_name_plural = 'ModelNames'
 
 
