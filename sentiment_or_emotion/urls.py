@@ -21,5 +21,4 @@ urlpatterns = [
     path("contact/", Contact, name="contact"),
     path("about/", About, name="about"),
 
-
-]
+] 

@@ -23,4 +23,5 @@ urlpatterns = [
     path('sentiment/', include('sentiment.urls')),
     path('', include('sentiment_or_emotion.urls')),
     path('emotion/', include('emotion.urls')),
+     path('__debug__/', include('debug_toolbar.urls')), 
 ]
